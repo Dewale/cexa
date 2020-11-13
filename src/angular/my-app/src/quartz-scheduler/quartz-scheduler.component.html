@@ -1,0 +1,19 @@
+<strong>CEXA Quartz Scheduler</strong>
+
+<div class="row">
+  <p>Use the button below to execute a task!</p>
+  <button (click)="schedule()"> Execute task </button>
+</div>
+
+<div *ngIf="detailsExist">
+  <h3>Executed jobs: </h3>
+  <div class="row" *ngFor="let jobs of jobDetailsList">
+    <div id="job-details">
+      <p>Job Name: {{jobs.jobName}}</p>
+      <p>Job Description: {{jobs.jobDescription}}</p>
+      <p>File Name: {{jobs.fileName}}</p>
+      <p>File Location: {{jobs.fileLocation}}</p>
+      <hr>
+    </div>
+  </div>
+</div>
